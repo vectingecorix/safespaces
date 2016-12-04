@@ -1,0 +1,90 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{thmtools}
+\usepackage{mathtools}
+\usepackage{enumerate}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+
+\begin{document}
+
+\title{Safe Spaces: An Introductory Course}
+
+\maketitle 
+
+\begin{abstract}
+Safe spaces are key icons of modern political debates. However, from a mathematical point of view the subject lacks rigorous studies. In this paper, we aim for a better understanding of safe spaces by providing exact definitions of safety inspired by linear algebra and analysis. 
+\end{abstract}
+
+\section{Introduction}
+
+
+
+\section{Preliminaries}
+
+\begin{definition}[emancipated, safe spaces, unsafe spaces]
+	Let $K$ be a field and $V$ be a $K$-vector space. We call $v \in V$ \emph{emancipated} if for every endomorphism $\alpha: V \to V$ and every $w \in V$ it holds that $\alpha(v) = \alpha(w)$. Further, we call $V$ a \emph{$K$-safe space} (or \emph{safe space} for short) if $V$ contains only emancipated vectors. Otherwise, $V$ is an \emph{unsafe space}.
+\end{definition}
+
+
+\begin{definition}[integrable]
+	Let $K$ be a field, $V$ be a $K$-safe space, and $W$ be a unsafe space.
+	A vector $w \in W$ is called \emph{integrible} if $V \cup \{w\}$ is a $K$-safe space.
+\end{definition}
+
+\section{Results}
+
+\begin{theorem}\label{thm:safe-space-trivial}
+	Let $V$ be a $K$-safe space. Then $V$ is trivial.
+\end{theorem}
+\begin{proof}
+	Assume that $V$ is not trivial, i.e. there exists some $v \neq 0$ in $V$. Then for $\alpha := \text{id}$ we get $\alpha(v) = v \neq 0 = \alpha(0)$. Hence, $V$ is an unsafe space.
+\end{proof}
+
+\begin{corollary}\label{cor:safe-space-dim0}
+	Let $K$ be a field and $V$ be a vector space. Then $V$ is a safe space if and only if $\dim V = 0$.
+\end{corollary}
+The proof is left as an exercise to interested readers as it follows directly from Theorem~\ref{thm:safe-space-trivial}.
+
+\begin{corollary}
+	Let $K$ be a field and $V, W$ $K$-safe spaces. Then $V$ and $W$ are isomorphic.
+\end{corollary}
+
+\begin{theorem}
+	Let $K$ be a field, $V$ be some finite-dimensional $K$-vector space and $\varphi : V \to V$ a $K$-linear function. Then the following statements are equivalent:
+	\begin{enumerate}[(i)]
+		\item $\varphi$ is bijective.
+		\item $\varphi$ is injective.
+		\item $\varphi$ is surjective.
+		\item $\text{ker}(\varphi)$ is a safe space.
+	\end{enumerate}
+\end{theorem}
+
+The proof is left as an exercise to the reader.
+
+\begin{theorem}
+	Let $V$ be a safe space. Then $V$ is closed under integration.
+
+\end{theorem}
+
+\begin{proof}
+	Let $W$ be an unsafe space. For every $w \in W$ the following implication holds: If $w$ is integrible then $w = 0 \in V$. Therefore, $V$ is closed under integration.
+\end{proof}
+
+
+\section{Conclusions}
+
+
+
+
+\end{document}
