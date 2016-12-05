@@ -100,6 +100,17 @@ The proof is left as an exercise to the reader.
 	Let $W$ be an unsafe space. For every $w \in W$ the following implication holds: If $w$ is integrable then $w = 0 \in V$. Therefore, $V$ is closed under integration.
 \end{proof}
 
+\begin{lemma}
+	Orthogonal spaces are relatively safe, but not every pair of relatively safe spaces is ortogonal.
+\end{lemma}
+
+\begin{proof}
+	Consider two orthogonal spaces $U$ and $W$, i.e. it holds that $\langle u, w \rangle = 0$ for all $u \in U$ and all $w \in W$. As $U$ and $W$ are orthogonal, $U \cap W = \{0\}$. Otherwise there existed some $v \in U \cap W$, $v \neq 0$, such that $\langle v, v \rangle > 0$.
+	
+	The other direction is not necessarily true. For example the real vectors $u \neq w$ with $\langle u,w \rangle \neq 0$ yield the subspaces $U = \{ \lambda u : \lambda \in \mathbb{R} \}$ and $W = \{ \lambda w : \lambda \in \mathbb{R}\}$. Obviously $U \cap W = \{0\}$, but $U$ and $W$ are not orthogonal by definition.
+\end{proof}
+
+
 
 \section{Conclusions}
 
